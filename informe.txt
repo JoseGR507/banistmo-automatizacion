@@ -1,0 +1,142 @@
+# INFORME TÉCNICO
+## Automatización de pruebas web – Banistmo
+
+**Proyecto:** Automatización de descarga y validación del documento «Prohibiciones»  
+**Sitio web:** https://www.banistmo.com/personas/  
+**Tecnología:** Java, Gradle, Selenium y Serenity BDD – Screenplay  
+**Fecha:** 6 de noviembre de 2026
+
+---
+
+## 1. Introducción
+
+El presente proyecto tiene como finalidad desarrollar una automatización de pruebas web sobre el portal oficial de Banistmo, utilizando Java y el patrón de diseño Screenplay proporcionado por Serenity BDD.
+
+La automatización reproduce el recorrido que realizaría un usuario para localizar y descargar el documento denominado «Prohibiciones», disponible en la sección de préstamos de automóviles regulares.
+
+Adicionalmente, se implementan verificaciones para comprobar que el documento descargado exista, tenga un tamaño válido, corresponda a un archivo PDF y contenga información textual esperada.
+
+## 2. Objetivo general
+
+Desarrollar una prueba automatizada que permita navegar por el portal de Banistmo, localizar el documento «Prohibiciones» y verificar técnicamente que su descarga sea correcta.
+
+## 3. Objetivos específicos
+
+- Automatizar el acceso al portal de Banistmo.
+- Navegar por las opciones de productos y servicios.
+- Localizar la sección de préstamos de automóviles regulares.
+- Acceder a la pestaña «Tasas y tarifas».
+- Identificar y descargar el documento «Prohibiciones».
+- Validar la existencia, integridad básica y contenido del archivo PDF.
+- Generar resultados de ejecución mediante Gradle y Serenity.
+
+## 4. Tecnologías y herramientas utilizadas
+
+| Herramienta | Utilización |
+|---|---|
+| Java 21 | Lenguaje de programación |
+| Gradle 8.10.2 | Gestión de dependencias y ejecución de pruebas |
+| Serenity BDD 4.2.34 | Framework de automatización |
+| Screenplay | Patrón de diseño para organizar las interacciones |
+| Selenium WebDriver | Automatización del navegador |
+| JUnit 5.11.4 | Ejecución de pruebas |
+| Apache PDFBox 3.0.4 | Lectura y validación de documentos PDF |
+| Microsoft Edge | Navegador utilizado para ejecutar la prueba |
+
+## 5. Descripción del proceso automatizado
+
+La prueba ejecuta el siguiente flujo:
+
+1. Accede al sitio web oficial de Banistmo.
+2. Ingresa a la sección de préstamos de automóviles.
+3. Identifica la tarjeta «Préstamos de Automóviles Regulares».
+4. Selecciona la opción «Descubre más».
+5. Accede a la pestaña «Tasas y tarifas».
+6. Localiza el enlace correspondiente al documento «Prohibiciones».
+7. Obtiene la dirección del documento PDF.
+8. Realiza la descarga mediante Java HttpClient.
+9. Guarda el archivo en la carpeta de descargas del usuario.
+10. Ejecuta las verificaciones del documento descargado.
+
+## 6. Arquitectura de la automatización
+
+El proyecto utiliza el patrón Screenplay de Serenity, que permite separar las responsabilidades de navegación, ejecución de tareas y validación de resultados.
+
+Los componentes principales son:
+
+- **OpenBanistmo:** inicia la navegación hacia el portal.
+- **NavigateToRegularAutoLoans:** localiza y selecciona los préstamos de automóviles regulares.
+- **OpenRatesAndFees:** accede a la pestaña de tasas y tarifas.
+- **DownloadProhibitions:** localiza el documento y realiza su descarga.
+- **DownloadedPdfIsValid:** comprueba la existencia y validez del PDF.
+- **BanistmoProhibitionsTest:** coordina la ejecución del escenario automatizado.
+
+Esta estructura permite mantener el código organizado, reutilizable y más sencillo de mantener.
+
+## 7. Validaciones implementadas
+
+La validación del documento contempla los siguientes criterios:
+
+1. **Existencia:** comprobar que el archivo `Prohibiciones.pdf` esté disponible en la carpeta de descargas.
+2. **Tamaño:** verificar que el archivo tenga un tamaño superior a 1 KB.
+3. **Firma del documento:** comprobar que los primeros cinco caracteres correspondan a la firma `%PDF-`.
+4. **Estructura:** abrir el archivo utilizando Apache PDFBox y comprobar que contenga al menos una página.
+5. **Contenido:** extraer el texto del documento y comprobar que incluya la palabra «Prohibiciones».
+
+## 8. Resultados de ejecución
+
+Durante la ejecución de la prueba se logró completar satisfactoriamente la navegación hacia la sección de préstamos de automóviles regulares y la identificación del documento solicitado.
+
+La descarga del documento fue confirmada mediante la respuesta del servidor:
+
+| Verificación | Resultado |
+|---|---|
+| Navegación al portal | Correcta |
+| Selección de préstamos regulares | Correcta |
+| Acceso al documento | Correcto |
+| Respuesta HTTP | 200 |
+| Tipo de contenido | application/pdf |
+| Archivo descargado | Prohibiciones.pdf |
+| Tamaño del archivo | 325,138 bytes |
+| Validación final con PDFBox | Pendiente de confirmación |
+
+El archivo fue guardado en:
+
+`C:\Users\joseg\Downloads\Prohibiciones.pdf`
+
+En la primera ejecución, la prueba presentó un error en la etapa de validación debido a que el componente de verificación no localizó el documento descargado. Se identificó que era necesario unificar la ruta utilizada por el componente de descarga y el componente de validación.
+
+Se realizó el ajuste correspondiente en el código de validación. La ejecución posterior permitirá confirmar el resultado definitivo.
+
+## 9. Dificultades técnicas encontradas
+
+Durante el desarrollo se identificaron los siguientes inconvenientes:
+
+- **Compatibilidad de Java:** se presentó un problema de compatibilidad al utilizar una versión de Java superior a la requerida por el entorno. Se resolvió utilizando JDK 21.
+- **Compatibilidad del navegador:** se identificaron advertencias relacionadas con la versión de Chrome DevTools Protocol y Microsoft Edge.
+- **Interacción con elementos web:** el enlace de descarga estaba ubicado en una zona donde otros elementos de la página interferían con el clic convencional de Selenium.
+- **Descarga del PDF:** debido al comportamiento del enlace y su apertura en una pestaña nueva, se implementó la descarga directa mediante Java HttpClient.
+- **Ruta del archivo:** se identificó una diferencia entre la ubicación donde se guardaba el PDF y la ubicación donde se buscaba durante la validación.
+
+Estas situaciones permitieron mejorar la estabilidad y el control del proceso automatizado.
+
+## 10. Conclusiones
+
+El desarrollo permitió implementar un flujo automatizado para navegar por el portal de Banistmo e identificar y descargar el documento «Prohibiciones».
+
+La utilización de Java, Selenium, Serenity BDD y Screenplay permitió estructurar la solución mediante componentes independientes, facilitando su mantenimiento y ampliación.
+
+La descarga del documento fue confirmada con una respuesta HTTP 200 y un archivo PDF de 325,138 bytes. La validación final del contenido y estructura del documento queda sujeta a la ejecución posterior a la corrección de la ruta de búsqueda.
+
+## 11. Evidencias
+
+Se recomienda incluir las siguientes evidencias en la entrega:
+
+- Captura de la página principal de Banistmo.
+- Captura de la sección de préstamos de automóviles regulares.
+- Captura de la pestaña «Tasas y tarifas».
+- Captura del documento «Prohibiciones» descargado.
+- Captura de la consola mostrando la ejecución de Gradle.
+- Captura del reporte HTML generado por Serenity.
+
+**Fin del informe.**
