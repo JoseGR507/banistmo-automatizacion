@@ -139,4 +139,11 @@ Se recomienda incluir las siguientes evidencias en la entrega:
 - Captura de la consola mostrando la ejecución de Gradle.
 - Captura del reporte HTML generado por Serenity.
 
+## 12. Comandos Git Utilizados
+
+- git clone https://github.com/JoseGR507/banistmo-automatizacion.git
+- git status
+- git commit -m "Informe v1"
+- git push origin main
+
 **Fin del informe.**
