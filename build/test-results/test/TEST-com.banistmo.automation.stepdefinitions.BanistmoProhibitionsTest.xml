@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.banistmo.automation.stepdefinitions.BanistmoProhibitionsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-07T03:45:03" hostname="JOSEGR507" time="11.977">
+  <properties/>
+  <testcase name="debe_descargar_y_validar_el_pdf_prohibiciones()" classname="com.banistmo.automation.stepdefinitions.BanistmoProhibitionsTest" time="11.977"/>
+  <system-out><![CDATA[
+========== INSPECCIÓN BANISTMO ==========
+URL: https://www.banistmo.com/personas/prestamos/auto
+
+CONTENIDO:
+Personas
+Pymes
+Empresas
+Acerca de
+Abre tu cuenta
+Canales de atención
+Buscar
+Inicio
+Productos & servicios
+Beneficios y segmentos
+Servicios digitales
+Banca en Línea Personas
+Entrar
+Personas
+Préstamos
+Automóviles
+Préstamos de Automóviles
+Encuentra el financiamiento ideal para tu próximo auto
+Explora nuestros préstamos de automóviles y accede a soluciones de financiamiento pensadas para acompañarte en la compra de un vehículo nuevo o usado. Da el siguiente paso hacia tu movilidad con Banistmo.
+Solicítalo aquí
+Cotiza tu préstamo fácil y rápido con nuestra calculadora
+Calcula tu préstamo
+Préstamos de Automóviles Regulares
+¡Recorre todos los caminos que quieras! Conoce nuestro préstamo de auto y adquiere el carro de tus sueños.
+Descubre más
+Préstamos de Autos Híbridos y Eléctricos
+¡Conduce hacia un futuro más sostenible con nuestros préstamo especializado para autos híbridos y eléctricos!
+Descubre más
+Conoce todo lo que necesitas saber sobre los ajustes de tasas
+Resuelve tus dudas aquí
+¿Necesitas contactarnos?
+Escríbenos
+Al Whatsapp.
+6525-4700
+Llámanos
+Hablemos por teléfono.
+306-4700
+Visítanos
+Busca nuestro próximo lugar de encuentro.
+Ver puntos de atención
+Otros canales de atención
+Enlaces de interés
+Actualización de datos
+Aprender es fácil
+Impulsa
+Sostenibilidad
+Gestión 2025
+Accesos rápidos
+Contáctanos
+Tarifario
+Transacciones
+Trabaja con nosotros
+Línea ética
+Legales
+Aviso de privacidad
+Prohibiciones
+Protección de datos personales
+Términos y condiciones de uso
+Síguenos en redes:
+Copyright © 2026 Banistmo
+
+========== TARJETAS DE PRÉSTAMOS ==========
+
+BOTÓN 1
+Texto: Descubre más
+Visible: true
+
+Nivel 0 | TAG: BUTTON | CLASE: cbc-card__button cbc-card__buttons-width cbc-button bc-gap-2 bc-border-radius-full-full cbc-button__primary false bc-px-4 cbc-button__py-12px false | TEXTO: Descubre más
+Nivel 1 | TAG: DIV | CLASE: cbc-card__buttons cbc-card__buttons-single | TEXTO: Descubre más
+Nivel 2 | TAG: DIV | CLASE: cbc-actions-container | TEXTO: Descubre más
+Nivel 3 | TAG: DIV | CLASE: cbc-card__size-data bc-flex bc-direction-column bc-w-100 bc-h-100 bc-position-relative bc-p-4 | TEXTO: Préstamos de Automóviles Regulares
+
+¡Recorre todos los caminos que quieras! Conoce nuestro préstamo de auto y adquiere el carro de tus sueños.
+
+Descubre más
+Nivel 4 | TAG: DIV | CLASE:  bc-flex bc-w-100 bc-h-100 cbc-card__vertical-start bc-overflow-hidden bc-border-radius-2-full bc-shadow-03 | TEXTO: Préstamos de Automóviles Regulares
+
+¡Recorre todos los caminos que quieras! Conoce nuestro préstamo de auto y adquiere el carro de tus sueños.
+
+Descubre más
+Nivel 5 | TAG: DIV | CLASE: 
+               cbc-or-multicolumn-container__element
+               cbc-or-multicolumn-container__element-center
+               cbc-or-multicolumn-container__element-desktop
+               cbc-or-multicolumn-container__element-tablet
+               cbc-or-multicolumn-container__element-mobile
+                | TEXTO: Préstamos de Automóviles Regulares
+
+¡Recorre todos los caminos que quieras! Conoce nuestro préstamo de auto y adquiere el carro de tus sueños.
+
+Descubre más
+
+BOTÓN 2
+Texto: Descubre más
+Visible: true
+
+Nivel 0 | TAG: BUTTON | CLASE: cbc-card__button cbc-card__buttons-width cbc-button bc-gap-2 bc-border-radius-full-full cbc-button__primary false bc-px-4 cbc-button__py-12px false | TEXTO: Descubre más
+Nivel 1 | TAG: DIV | CLASE: cbc-card__buttons cbc-card__buttons-single | TEXTO: Descubre más
+Nivel 2 | TAG: DIV | CLASE: cbc-actions-container | TEXTO: Descubre más
+Nivel 3 | TAG: DIV | CLASE: cbc-card__size-data bc-flex bc-direction-column bc-w-100 bc-h-100 bc-position-relative bc-p-4 | TEXTO: Préstamos de Autos Híbridos y Eléctricos
+
+¡Conduce hacia un futuro más sostenible con nuestros préstamo especializado para autos híbridos y eléctricos!
+
+Descubre más
+Nivel 4 | TAG: DIV | CLASE:  bc-flex bc-w-100 bc-h-100 cbc-card__vertical-start bc-overflow-hidden bc-border-radius-2-full bc-shadow-03 | TEXTO: Préstamos de Autos Híbridos y Eléctricos
+
+¡Conduce hacia un futuro más sostenible con nuestros préstamo especializado para autos híbridos y eléctricos!
+
+Descubre más
+Nivel 5 | TAG: DIV | CLASE: 
+               cbc-or-multicolumn-container__element
+               cbc-or-multicolumn-container__element-center
+               cbc-or-multicolumn-container__element-desktop
+               cbc-or-multicolumn-container__element-tablet
+               cbc-or-multicolumn-container__element-mobile
+                | TEXTO: Préstamos de Autos Híbridos y Eléctricos
+
+¡Conduce hacia un futuro más sostenible con nuestros préstamo especializado para autos híbridos y eléctricos!
+
+Descubre más
+
+========== FIN INSPECCIÓN ==========
+Se hizo clic en Descubre más de Préstamos de Automóviles Regulares.
+
+========== DESCARGA PROHIBICIONES ==========
+URL del PDF: https://assets.ctfassets.net/catp2t59asao/uysnPLpox9Pme7LAPtG3b/95d90e74af37f6c0379d26313c64529f/Prohibiciones.pdf
+Clic ejecutado sobre Prohibiciones.
+Código HTTP: 200
+Content-Type: application/pdf
+PDF guardado correctamente: C:\Users\joseg\Downloads\Prohibiciones.pdf
+Tamaño: 325138 bytes
+========== FIN DESCARGA PROHIBICIONES ==========
+
+
+========== VALIDACIÓN DEL PDF ==========
+Ruta esperada: C:\Users\joseg\Downloads\Prohibiciones.pdf
+Tamaño: 325138 bytes
+Páginas: 3
+Contiene la palabra 'Prohibiciones': true
+========== FIN VALIDACIÓN ==========
+
+]]></system-out>
+  <system-err><![CDATA[nov 06, 2026 10:45:04 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTENCIA: Unable to find CDP implementation matching 156
+nov 06, 2026 10:45:04 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+ADVERTENCIA: Unable to find version of CDP to use for 156.0.4314.58. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>

@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.banistmo.automation'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    serenityVersion = '4.2.34'
+    junitVersion = '5.11.4'
+}
+
+dependencies {
+    testImplementation "net.serenity-bdd:serenity-core:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-junit5:${serenityVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter:${junitVersion}"
+    testImplementation "org.apache.pdfbox:pdfbox:3.0.4"
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+}
+
+test {
+    useJUnitPlatform()
+
+    systemProperty 'webdriver.driver',
+            System.getProperty('webdriver.driver', 'edge')
+
+    systemProperty 'serenity.project.name',
+            'Reto técnico Banistmo - Préstamos de autos'
+
+    testLogging {
+        showStandardStreams = true
+
+        events 'passed', 'skipped', 'failed',
+               'standardOut', 'standardError'
+
+        exceptionFormat 'full'
+    }
+}

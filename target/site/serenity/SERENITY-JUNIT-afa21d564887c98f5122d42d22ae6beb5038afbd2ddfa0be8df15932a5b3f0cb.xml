@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="com.banistmo.automation.stepdefinitions.BanistmoProhibitionsTest" skipped="0" tests="1" time="11.99" timestamp="2026-11-06 10:45:03"><testcase classname="com.banistmo.automation.stepdefinitions.BanistmoProhibitionsTest" name="Debe descargar y validar el pdf prohibiciones"/></testsuite>
